@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 8</title>
+    <link rel="shortcut icon" href="ambatukam.jpg" type="image/x-icon" />
+    <h1>Soal 8</h1>
+</head>
+<body>
+    <body>
+        <label for="numberInput">Masukkan bilangan: </label>
+        <input type="number" id="numberInput">
+        <button id="checkButton">Cek</button>
+    
+        <script>
+            document.getElementById("checkButton").addEventListener("click", function() {
+                var inputValue = parseFloat(document.getElementById("numberInput").value);
+    
+                if (isNaN(inputValue)) {
+                    alert("Masukkan bilangan yang valid.");
+                } else if (inputValue > 0) {
+                    alert(inputValue + " adalah bilangan positif.");
+                } else if (inputValue < 0) {
+                    alert(inputValue + " adalah bilangan negatif.");
+                } else {
+                    alert("Nilai nol adalah netral.");
+                }
+            });
+        </script>
+    </body>
+</body>
+</html>

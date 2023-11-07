@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 3</title>
+    <link rel="shortcut icon" href="ambatukam.jpg" type="image/x-icon" />
+    <h1>Soal 3</h1>
+</head>
+<body>
+    <label for="alasInput">Masukkan panjang alas: </label>
+    <input type="number" id="alasInput">
+    <br>
+    <label for="tinggiInput">Masukkan tinggi: </label>
+    <input type="number" id="tinggiInput">
+    <br>
+    <button id="hitungButton">Hitung Luas</button>
+
+    <script>
+        document.getElementById("hitungButton").addEventListener("click", function() {
+           
+            var alas = parseFloat(document.getElementById("alasInput").value);
+            var tinggi = parseFloat(document.getElementById("tinggiInput").value);
+
+            var luasSegitiga = 0.5 * alas * tinggi;
+
+            if (isNaN(alas) || isNaN(tinggi)) {
+                alert("Masukkan panjang alas dan tinggi yang valid.");
+            } else {
+                alert("Luas segitiga: " + luasSegitiga);
+            }
+        });
+    </script>
+</body>
+</html>

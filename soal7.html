@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 7</title>
+    <link rel="shortcut icon" href="ambatukam.jpg" type="image/x-icon" />
+    <h1>Soal 7</h1>
+</head>
+<body>
+    <body>
+        <button id="numberBtn">Angka</button>
+        <button id="stringBtn">String</button>
+        <button id="arrayBtn">Array</button>
+        <button id="objectBtn">Object</button>
+        <button id="booleanBtn">Boolean</button>
+    
+        <script>
+            function showMessage(message) {
+                alert(message);
+            }
+    
+            document.getElementById("numberBtn").addEventListener("click", function() {
+                var angka = 42;
+                console.log("Bilangan: " + angka);
+                showMessage("Bilangan: " + angka);
+            });
+    
+            document.getElementById("stringBtn").addEventListener("click", function() {
+                var teks = "Ini Merupakan Bagian String";
+                console.log("String: " + teks);
+                showMessage("String: " + teks);
+            });
+    
+            document.getElementById("arrayBtn").addEventListener("click", function() {
+                var angka = [1, 2, 3, 4, 5];
+                console.log("Array: " + JSON.stringify(angka));
+                showMessage("Array: " + JSON.stringify(angka));
+            });
+    
+            document.getElementById("objectBtn").addEventListener("click", function() {
+                var obj = { nama: "Rayhan", umur: 16 };
+                console.log("Bagian Object: " + JSON.stringify(obj));
+                showMessage("Bagian Object: " + JSON.stringify(obj));
+            });
+    
+            document.getElementById("booleanBtn").addEventListener("click", function() {
+                var bool = true;
+                console.log("Boolean: " + bool);
+                showMessage("Boolean: " + bool);
+            });
+        </script>
+    </body>
+</html>

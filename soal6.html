@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 6</title>
+    <link rel="shortcut icon" href="ambatukam.jpg" type="image/x-icon" />
+    <h1>Soal 6</h1>
+</head>
+<body>
+    <input type="text" id="inputNumber" placeholder="Masukkan bilangan">
+    <button id="checkButton">Cek</button>
+
+    <script>
+        document.getElementById("checkButton").addEventListener("click", function() {
+            var inputElement = document.getElementById("inputNumber");
+            var inputNumber = parseInt(inputElement.value);
+
+            if (!isNaN(inputNumber)) {
+                if (inputNumber % 2 === 0) {
+                    alert(inputNumber + " adalah bilangan genap.");
+                } else {
+                    alert(inputNumber + " adalah bilangan ganjil.");
+                }
+            } else {
+                alert("Masukkan bilangan yang valid.");
+            }
+        });
+    </script>
+</body>
+</html>
